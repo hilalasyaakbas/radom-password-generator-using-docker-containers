@@ -1,0 +1,11 @@
+# Dockerfile for Input Manager
+FROM python:3.10-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the input manager script into the container
+COPY input_manager.py .
+
+# Set the entrypoint to run the script
+ENTRYPOINT ["python", "input_manager.py"]

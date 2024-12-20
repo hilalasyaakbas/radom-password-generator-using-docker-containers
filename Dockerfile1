@@ -1,0 +1,11 @@
+# Dockerfile for Password Generator
+FROM python:3.10-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the password generator script into the container
+COPY password_generator.py .
+
+# Set the entrypoint to run the script
+ENTRYPOINT ["python", "password_generator.py"]
